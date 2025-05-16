@@ -53,7 +53,7 @@ void updateEncoder() {
 
 void handleButtonPress() {
   static unsigned long lastPress = 0;
-  if (millis() - lastPress > 200) {  // basic debounce
+  if (millis() - lastPress > 200) {  // debounce
     swPressed = true;
     lastPress = millis();
   }
@@ -107,5 +107,5 @@ void loop() {
     lcd.write(abeceda[indeks]);
   }
 
-  delay(10); // minimal delay to prevent flickering
+  delay(10);
 }
